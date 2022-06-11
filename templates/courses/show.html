@@ -12,6 +12,16 @@
     Course Capacity: {{course.capacity}} <br>
     Course Status: {{course.active}}
 </p>
+
+{% for member in members %}
+<ul>
+        Member Name: {{member.name}} <br> 
+        Member Age: {{member.age}} <br>
+        Member Membership: {{member.membership}} <br>
+        Member status: {{member.active}} <br>
+</ul>
+{% endfor %}
+
 <a href="/courses/{{ course.id }}/edit">Edit</a>
 
 {% endblock %}

@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.course import Course
+from models.member import Member
 
 
 
@@ -47,3 +48,20 @@ def delete(id):
     sql = "DELETE FROM courses WHERE id = %s"
     values = [id]
     run_sql(sql, values)    
+
+
+def members(course):
+    
+    course_members = [] 
+
+    sql = """ SELECT members.* FROM members
+        INNER JOIN bookings
+        ON bookings.member_id = members.id
+        WHERE bookings.course_id = %s;
+     """    
+    values = [course.id] 
+    results = run_sql(sql,values)
+    for row in results:
+        member = Member(row['name'],row['age'],row['membership'],row['active'], row['id'])
+        course_members.append(member)
+    return course_members      

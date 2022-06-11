@@ -13,10 +13,10 @@ def member():
     return render_template("members/index.html", members = members)
 
 
-@members_blueprint.route("/members/<id>")
-def show(id):
-    members = members_repository.select(id)
-    return render_template("members/show.html", members = members)    
+# @members_blueprint.route("/members/<id>")
+# def show(id):
+#     members = members_repository.select(id)
+#     return render_template("members/show.html", members = members)    
 
 
 @members_blueprint.route("/members/new")
@@ -32,13 +32,13 @@ def create_member():
     active = request.form["active"]
     new_member = Member(name, age, membership, active)
     members_repository.save(new_member)
-    return redirect("/member")
+    return redirect("/members")
 
 
 @members_blueprint.route("/members/<id>/edit")
 def edit_member(id):
     member = members_repository.select(id)
-    return render_template('humans/edit.html', member=member)
+    return render_template('members/edit.html', member=member)
 
 
 @members_blueprint.route("/members/<id>", methods=["POST"])

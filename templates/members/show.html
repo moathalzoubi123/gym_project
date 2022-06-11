@@ -4,6 +4,11 @@
 <h2>member</h2>
 
 
-
+<p> Member Name: {{ member.name }} <br> 
+    Member Age: {{member.age}} <br>
+    Member Membership: {{member.membership}} <br>
+    Member status: {{member.active}} <br>
+</p>
+<a href="/members/{{ member.id }}/edit">Edit</a>
 
 {% endblock %}

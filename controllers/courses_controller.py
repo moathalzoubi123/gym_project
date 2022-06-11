@@ -14,8 +14,8 @@ def courses():
 
 @courses_blueprint.route("/courses/<id>")
 def show(id):
-    courses = courses_repository.select(id)
-    return render_template("courses/show.html", courses = courses )     
+    course = courses_repository.select(id)
+    return render_template("courses/show.html", course = course )     
 
 
 @courses_blueprint.route("/courses/new")
@@ -39,8 +39,8 @@ def create_courses():
 
 @courses_blueprint.route("/courses/<id>/edit")
 def edit_member(id):
-    courses = courses_repository.select(id)
-    return render_template('courses/edit.html', courses = courses)
+    course = courses_repository.select(id)
+    return render_template('courses/edit.html', course = course)
 
 
 @courses_blueprint.route("/courses/<id>", methods=["POST"])
@@ -56,7 +56,7 @@ def update_courses(id):
     courses_repository.update(course)
     return redirect("/courses")
 
-@courses_blueprint.route("/course/<id>/delete", methods=['POST'])
+@courses_blueprint.route("/courses/<id>/delete", methods=['POST'])
 def delete_course(id):
     courses_repository.delete(id)
     return redirect('/courses')   

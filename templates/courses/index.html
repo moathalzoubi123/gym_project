@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>P3_Gym Courses</h1>
+
+    
+    <nav>
+        <ul>
+            <li>
+                <a href="/courses/new">Add New course</a>
+            </li>
+        </ul>
+    </nav>
+    
+    {% for course in courses %}
+    
+    <section>
+        <p> Course Name :  <a href="/courses/{{course.id}} ">{{course.name}}</a> <br> 
+            Start Date: {{course.start_date}} <br>
+            End_date: {{course.end_date}} <br>
+            Time: {{course.time}} <br>
+            Course Duration: {{course.duration}} <br>
+            Course Capacity: {{course.capacity}} <br>
+            Course Status: {{course.active}}
+        </p>
+         <br>
+        <form action="/courses/{{ course.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        <hr>    
+        </form>
+    </section>
+    {% endfor %}
+
+{% endblock %}

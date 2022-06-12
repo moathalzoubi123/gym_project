@@ -35,7 +35,7 @@ def select(id):
 
 
 def update(course):
-    sql = "UPDATE members SET (name, start_date, end_date, time, duration, capacity, active) = (%s,%s,%s,%s,%s,%s,%s) WHERE id = %s"
+    sql = "UPDATE courses SET (name, start_date, end_date, time, duration, capacity, active) = (%s,%s,%s,%s,%s,%s,%s) WHERE id = %s"
     values = [course.name, course.start_date, course.end_date, course.time ,course.duration, course.capacity, course.active, course.id] 
     run_sql(sql, values)
 

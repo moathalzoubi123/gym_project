@@ -18,7 +18,7 @@
   <label for="course">Select a Course:</label>
     <select name="course_id" id="course">
       {% for course in courses %}
-        {% if course.capacity >= 1  and course.active == True %}  
+        {% if course.capacity >= 1  or course.active == True %}  
       <option value="{{ course.id }}">{{ course.name }}</option>
       {% endif %}
       {% endfor %}

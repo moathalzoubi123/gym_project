@@ -27,6 +27,17 @@ def select_all():
         bookings.append(booking)
     return bookings
 
+def select(id):
+    booking = None
+    sql = "SELECT * FROM bookings WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        member = members_repository.select(result['member_id'])
+        course = courses_repository.select(result['course_id'])
+        booking = Booking(member,course ,result['id'])
+    return booking      
+
 
 def delete_all():
     sql = "DELETE FROM bookings"

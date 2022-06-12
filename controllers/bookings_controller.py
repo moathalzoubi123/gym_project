@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.booking import Booking
+from models.course import Course, free_space
 import repositories.booking_repository as booking_repository
 import repositories.courses_repository as courses_repository
 import repositories.members_repository as members_repository
@@ -37,6 +38,8 @@ def create_booking():
     course = courses_repository.select(course_id)
     booking = Booking(member, course)
     booking_repository.save(booking)
+    free_space(course)
+    courses_repository.update(course)
     return redirect('/bookings')
 
 

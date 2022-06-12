@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Course:{{course.name}}</h2>
+<h2>booking</h2>
 
 
-<p>{{ booking.member.name }} - {{ booking.course.name }} </p>
+{{ booking.member.name }} - {{ booking.course.name }} 
+
+<br>
 
 <a href="/bookings/{{ booking.id }}/edit">Edit</a>
 

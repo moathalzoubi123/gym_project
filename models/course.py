@@ -8,3 +8,9 @@ class Course:
         self.capacity = capacity
         self.active = active 
         self.id = id 
+
+
+
+
+def free_space(self):
+    self.capacity -= 1 

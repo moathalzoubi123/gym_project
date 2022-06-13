@@ -30,6 +30,7 @@ def new_booking():
     return render_template("bookings/new.html", members = members, courses= courses )
 
 
+
 @bookings_blueprint.route("/bookings",  methods=['POST'])
 def create_booking():
     member_id = request.form['member_id']
@@ -37,10 +38,18 @@ def create_booking():
     member = members_repository.select(member_id)
     course = courses_repository.select(course_id)
     booking = Booking(member, course)
-    booking_repository.save(booking)
-    free_space(course)
-    courses_repository.update(course)
+    if int(course.time.strftime("%H")) >= 17 and member.membership != "premium":
+
+        return render_template("bookings/apology.html")
+    else:    
+      booking_repository.save(booking)
+      free_space(course)
+      courses_repository.update(course)
     return redirect('/bookings')
+
+
+
+
 
 
 @bookings_blueprint.route("/bookings/<id>/delete", methods=['POST'])

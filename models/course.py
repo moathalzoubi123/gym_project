@@ -14,3 +14,5 @@ class Course:
 
 def free_space(self):
     self.capacity -= 1 
+
+    

@@ -12,20 +12,24 @@
     </ul>
 </nav>
 
-{% for member in members %}
 
-<section>
-    <p> Member Name:  <a href="/members/{{member.id}} ">{{member.name}}</a> <br> 
-        Member Age: {{member.age}} <br>
-        Member Membership: {{member.membership}} <br>
-        Member status: {{member.active}} <br>
-    </p>
-     <br>
-    <form action="/members/{{ member.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
-    <hr>    
-    </form>
-</section>
+<article class="container">
+
+   {% for member in members %}
+
+    <section>
+          <p> Member Name:  <a href="/members/{{member.id}} ">{{member.name}}</a> <br> 
+              Member Age: {{member.age}} <br>
+              Member Membership: {{member.membership}} <br>
+              Member status: {{member.active}} <br>
+        </p>
+        <br>
+        <form action="/members/{{ member.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+         <hr>    
+        </form>
+    </section>
+</article>
 
 {% endfor %}
 {% endblock %}

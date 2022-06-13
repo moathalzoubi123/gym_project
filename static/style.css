@@ -3,3 +3,52 @@ body{
     color: yellow;
     
 }
+
+header{
+    height: 6rem;
+    background-color: black;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#logo{
+    margin-left: 5%;
+}
+
+
+body>nav>ul{
+
+    display: flex;
+    width: 25%;
+    height: 3rem;
+} 
+
+nav>ul>li>a{
+    color: yellow;
+    text-decoration: none;
+  }
+  
+nav>li>a:hover{
+    text-decoration: underline;
+  }
+
+body>nav>ul>li{
+
+flex: 2;
+} 
+
+#content{
+
+    display: flex;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+}
+
+/* .container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+  } */
+
+  

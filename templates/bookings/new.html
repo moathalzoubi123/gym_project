@@ -9,7 +9,7 @@
   <label for="mamber">Select a Member:</label>
     <select name="member_id" id="member">
       {% for member in members %}
-      {% if member.active == True %}
+      {% if member.active == True  %}
       <option value="{{ member.id }}">{{ member.name }}</option>
       {% endif %}
       {% endfor %}

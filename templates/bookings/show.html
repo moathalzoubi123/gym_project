@@ -3,11 +3,34 @@
 
 <h2>booking</h2>
 
+<article>
+{{ booking.member.name }} - {{ booking.course.name }} <br>
+<br>
+<a href="/bookings/{{ booking.id }}/edit">Edit</a>
+<section class="id1">
+<p class="box"> Course Name :{{booking.course.name}}</a> <br> 
+    <br>
+    Start Date: {{booking.course.start_date}} <br>
+    End_date: {{booking.course.end_date}} <br>
+    Time: {{booking.course.time}} <br>
+    Course Duration: {{booking.course.duration}} <br>
+    Course Capacity: {{booking.course.capacity}} <br>
+    Course Status: {{booking.course.active}}
+</p>
 
-{{ booking.member.name }} - {{ booking.course.name }} 
+
+<p class="box"> Member Name:{{booking.member.name}}</a> <br> 
+    <br>
+      Member Age: {{booking.member.age}} <br>
+      Member Membership: {{booking.member.membership}} <br>
+      Member status: {{booking.member.active}} <br>
+</p>
+
+
 
 <br>
+</section>
+</article>
 
-<a href="/bookings/{{ booking.id }}/edit">Edit</a>
 
 {% endblock %}

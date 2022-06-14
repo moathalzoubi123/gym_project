@@ -37,13 +37,66 @@ body>nav>ul>li{
 flex: 2;
 } 
 
-#content{
+.id1{
+display: flex;
+display: grid;
+justify-content: center;
+grid-template-columns: 30% 30% 30%;
+
+}
+
+.id2{
+    display: flex;
+    display: grid;
+    justify-content: center;
+}
+
+.id3{
+    display: flex;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.center{
+    display: flex;
+    display: grid;
+    justify-content: center;
+}
+
+.box{
+    color: black;
+    background-color: yellow;
+    padding: 2rem;
+    margin: 2rem;
+    display: grid;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #content{
 
     display: flex;
     display: grid;
     justify-content: center;
     grid-template-columns: 30% 30% 30%;
-}
+    color: yellow;
+    /* background-color: yellow; */
+
 
 /* .container{
     display: grid;
@@ -51,4 +104,122 @@ flex: 2;
     grid-template-columns: 30% 30% 30%;
   } */
 
+
+
+
+/* body{
+    background: url('/static/images/pic.jpeg');
+    color: yellow;
+    
+}
+
+header{
+    height: 6rem;
+    background-color: black;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#logo{
+    margin-left: 5%;
+}
+
+
+body>nav>ul{
+
+    display: flex;
+    width: 25%;
+    height: 3rem;
+} 
+
+nav>ul>li>a{
+    color: yellow;
+    text-decoration: none;
+  }
   
+nav>li>a:hover{
+    text-decoration: underline;
+  }
+
+body>nav>ul>li{
+
+flex: 2;
+} 
+/* 
+#content{
+
+    display: flex;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+    
+} */
+
+
+/* .box{
+    /* display: flex; */
+    /* color: black;
+    background-color: yellow;
+    padding: 2rem;
+    margin: 2rem;
+    display: grid;
+    border-radius: 5px; */
+    /* grid-template-columns: 30% 30% 30%; */
+
+
+    /* grid-template-columns: 30% 30% 30%; */
+
+
+/* .box{
+  display: flex;
+  display: flex;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+
+  padding: 10px;
+  margin: 20px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: black; */
+  /* align-items: flex-end; */
+
+
+/* .container_1{
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    } */
+
+/* .btata{
+    color: yellow;
+}   
+
+
+#content{
+  display: flex;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%; */
+
+  /* padding: 10px;
+  margin: 20px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
+  
+
+/* .btata_2{
+    display: flex;
+    flex: 10;
+    width: 40%;
+    grid-template-columns: 50% 50%;
+
+
+}   */

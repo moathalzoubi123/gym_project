@@ -4,13 +4,13 @@
 <h1>Bookings</h1>
 
 <p>
-  <a href="/bookings/new">New Booking</a>
+  <a class="btata" href="/bookings/new">New Booking</a>
 </p>
 
-<ul>
+<ul class="id3">
   {% for booking in bookings %}
-  <li>
-  <p> <a href="/bookings/{{booking.id}} ">{{ booking.member.name }} - {{ booking.course.name }}</a> </p>
+  <li class="box">
+  <p > <a class="btata" href="/bookings/{{booking.id}} ">{{ booking.member.name }} - {{ booking.course.name }}</a> </p>
 
     <p>
       <form action="/bookings/{{ booking.id }}/delete" method="POST">

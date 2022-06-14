@@ -12,10 +12,14 @@
         </ul>
     </nav>
     
+
+<article class="id1">
+
     {% for course in courses %}
     
-    <section>
+    <section class="box">
         <p> Course Name :  <a href="/courses/{{course.id}} ">{{course.name}}</a> <br> 
+            <br>
             Start Date: {{course.start_date}} <br>
             End_date: {{course.end_date}} <br>
             Time: {{course.time}} <br>
@@ -25,10 +29,11 @@
         </p>
          <br>
         <form action="/courses/{{ course.id }}/delete" method="POST">
-            <input type="submit" value="Delete">
-        <hr>    
+            <input type="submit" value="Delete">   
         </form>
     </section>
     {% endfor %}
+</article>
+
 
 {% endblock %}

@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>member</h2>
+<h2>Member {{member.name}}</h2>
+<a href="/members/{{ member.id }}/edit">Edit</a>
 
-
-<p> Member Name: {{ member.name }} <br> 
+<p class="box"> Member Name: {{ member.name }} <br> 
     Member Age: {{member.age}} <br>
     Member Membership: {{member.membership}} <br>
     Member status: {{member.active}} <br>
 </p>
-<a href="/members/{{ member.id }}/edit">Edit</a>
+
 
 {% endblock %}

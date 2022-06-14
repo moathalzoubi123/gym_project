@@ -40,7 +40,7 @@ def create_booking():
     booking = Booking(member, course)
     if int(course.time.strftime("%H")) >= 17 and member.membership != "premium":
 
-        return render_template("bookings/apology.html")
+        return render_template("bookings/apology.html", member = member)
     else:    
       booking_repository.save(booking)
       free_space(course)

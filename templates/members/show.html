@@ -4,11 +4,27 @@
 <h2>Member {{member.name}}</h2>
 <a href="/members/{{ member.id }}/edit">Edit</a>
 
+
+<section class="center">
 <p class="box"> Member Name: {{ member.name }} <br> 
     Member Age: {{member.age}} <br>
     Member Membership: {{member.membership}} <br>
     Member status: {{member.active}} <br>
 </p>
+</section>
 
+<section class="id1">
+{% for course in courses %}
+<p class="box"> 
+    Course Name :{{course.name}} <br> 
+    Start Date: {{course.start_date}} <br>
+    End_date: {{course.end_date}} <br>
+    Time: {{course.time}} <br>
+    Course Duration: {{course.duration}} <br>
+    Course Capacity: {{course.capacity}} <br>
+    Course Status: {{course.active}}
+</p>
+{% endfor %}
+</section>
 
 {% endblock %}

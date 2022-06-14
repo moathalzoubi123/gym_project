@@ -62,6 +62,6 @@ def members(course):
     values = [course.id] 
     results = run_sql(sql,values)
     for row in results:
-        member = Member(row['name'],row['age'],row['membership'],row['active'], row['id'])
-        course_members.append(member)
+     member= Member(row['name'],row['age'],row['membership'],row['active'], row['id'])   
+     course_members.append(member)
     return course_members      

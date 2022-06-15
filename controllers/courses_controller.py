@@ -12,6 +12,7 @@ def courses():
     courses = courses_repository.select_all()
     return render_template("courses/index.html", courses = courses)
 
+
 @courses_blueprint.route("/courses/<id>")
 def show(id):
     course = courses_repository.select(id)
@@ -56,6 +57,7 @@ def update_courses(id):
     course = Course(name, start_date, end_date, time, duration,capacity, active,id)
     courses_repository.update(course)
     return redirect("/courses")
+
 
 @courses_blueprint.route("/courses/<id>/delete", methods=['POST'])
 def delete_course(id):
